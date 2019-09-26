@@ -72,7 +72,7 @@ const fetchBooks = async () => {
               <ListItem key={index}>
                 <img alt={`${book.volumeInfo.title} book`} src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} />
                   <strong>
-                    {book.volumeInfo.title} by {book.volumeInfo.author}
+                    {book.volumeInfo.title} by {book.volumeInfo.authors}
                   </strong>
                   <h3>{book.volumeInfo.publishedDate}</h3>
                 <SaveBtn />
