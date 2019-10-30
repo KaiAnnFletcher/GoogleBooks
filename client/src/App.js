@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 //import Books from "./pages/SavedBooks";
 import Navbar from "./components/Navbar";
 import Search from "./pages/Search";
+import Save from "./pages/Save";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
@@ -16,7 +17,7 @@ function App() {
       <Route exact path="/" component={About} />
       <Route exact path="/search" component={Search} />
       <Route exact path="/about" component={About} />
-      {/* <Route exact path="/saved" component={Books} /> */}
+      <Route exact path="/saved" component={Save} />
       <Footer />
       </Wrapper>
     </div>

@@ -4,8 +4,8 @@ import Jumbotron from "../components/Jumbotron";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input,  SubmitBtn } from "../components/SearchForm";
-//import key from "../utils/googlebooksearch/.env";
 import SaveBtn from "../components/SaveBtn";
+import API from "../utils/API"
 
 //Search input state using useState Hooks
 //Let's Add the local state for search input using useState hooks
@@ -38,6 +38,15 @@ const fetchBooks = async () => {
         //Call fetch books async function
         fetchBooks();
     }
+
+// Now for the save button
+
+const onSaveHandler = (e) => {
+      //Prevent browser refreshing after form submission
+      e.preventDefault();
+      //call the save function to update the database
+      API.saveBook();
+}
 
 //Now to return the UI for the books search results
 
@@ -75,7 +84,9 @@ const fetchBooks = async () => {
                     {book.volumeInfo.title} by {book.volumeInfo.authors}
                   </strong>
                   <h3>{book.volumeInfo.publishedDate}</h3>
-                <SaveBtn />
+                  <h5>{book.volumeInfo.description}</h5>
+                  <h5>{book.selfLink}</h5>
+                <SaveBtn onClick = {onSaveHandler}/>
               </ListItem>
             ))}
           </List>

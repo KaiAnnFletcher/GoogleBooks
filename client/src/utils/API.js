@@ -13,7 +13,7 @@ deleteBook: function(id) {
   return axios.delete("/api/savedbooks/" + id)
 },
 
-// Gets the saved book with the given id
+// Gets the saved books with the given id's
 getBook: function(id) {
   return axios.get("/api/savedbooks/" + id);
 },
