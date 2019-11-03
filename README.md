@@ -1,5 +1,7 @@
 # GoogleBooks
 
+UNDER CONSTRUCTION
+
 _What Does this Project Do?_
 
 * Search using any author's name and access the Google Books API to get useful information on popular books of your choice.
@@ -24,3 +26,7 @@ If you do have any questions regarding this project:
 _Who maintains and contributes to the project?_
 
 * I am the sole contributer to this project and will also be responsible for the maintenance of it.
+
+_To Be Completed_
+
+* There is an error for too many re-renders for the Saved page. This needs to be fixed in due time.

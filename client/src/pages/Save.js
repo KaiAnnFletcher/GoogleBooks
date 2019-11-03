@@ -8,17 +8,18 @@ import API from "../utils/API";
 //import key from "../utils/googlebooksearch/.env";
 //import SaveBtn from "../components/SaveBtn";
 
-export default function Save(props) {
-    const [books, setBooks] = useState(props ? true : false);
+const Save = ({}) => {
+
+const [books, setBooks] = useState(books ? true : false);
 
     API.getBook();
     const response = fetch("/api/savedbooks/");
     setBooks(response);
-
+      
 
 useEffect(() => {
-    API.getBook(props.id);
-}, [props.id]);
+    API.getBook(books._id);
+}, [books._id]);
 
 if (!books) {
     return "loading...";
@@ -47,3 +48,5 @@ if (!books) {
         </Container>
     )
         }
+
+  export default Save;
